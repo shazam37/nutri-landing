@@ -60,8 +60,8 @@ export async function POST(request: Request) {
           <div style="background-color: #f8fafc; border-radius: 12px; padding: 20px; margin: 20px 0; border: 1px solid #e2e8f0;">
             <p style="margin: 0; font-size: 14px; font-weight: bold; color: #64748b; text-transform: uppercase;">Next Steps:</p>
             <ul style="padding-left: 20px; margin-top: 10px; font-size: 15px;">
-              <li><strong>Testers:</strong> You will receive a secure link to the Android APK once your slot is ready.</li>
-              <li><strong>Collaborators:</strong> Our tech lead will review your profile (${link || 'No portfolio provided'}) for repository access.</li>
+              <li><strong>Testers:</strong> You will receive a secure link to the Android APK / iOS TestFlight once your slot is ready.</li>
+              <li><strong>Collaborators:</strong> We will review your profile (${link || 'No portfolio provided'}) for repository access.</li>
             </ul>
           </div>
 
