@@ -52,7 +52,7 @@ export default function Hero() {
         className="z-10 text-center mb-16"
       >
         <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-slate-900 mb-6 italic">
-          Nutri.<span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-teal-500">ai</span>
+        Nutri.<span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-teal-500 pr-2">ai</span>
         </h1>
         <p className="max-w-2xl mx-auto text-lg md:text-xl text-slate-600 mb-10 font-medium leading-relaxed">
           Precision nutrition, minus the manual entry. Track what you eat and manage what you own with AI-driven vision and automated pantry logic.
