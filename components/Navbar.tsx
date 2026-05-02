@@ -49,7 +49,7 @@ export default function Navbar() {
             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
           </div>
           <span className="text-[10px] md:text-xs font-black uppercase tracking-tighter text-slate-900">
-            Beta v 0.1
+            Beta v 0.8.2
           </span>
         </div>
       </nav>
