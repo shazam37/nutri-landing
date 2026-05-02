@@ -49,7 +49,7 @@ export default function Join() {
               <CheckCircle2 className="w-10 h-10" />
             </div>
             <h2 className="text-4xl font-black text-slate-900 mb-4 tracking-tight italic">Registration Received.</h2>
-            <p className="text-slate-500 font-medium mb-2">Check your inbox for a confirmation from the Nutri.ai team.</p>
+            {/* <p className="text-slate-500 font-medium mb-2">Check your inbox for a confirmation from the Nutri.ai team.</p> */}
             <p className="text-slate-400 text-sm">We'll reach out shortly regarding build access.</p>
           </div>
         </motion.div>

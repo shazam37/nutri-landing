@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { 
   Microscope, 
@@ -10,7 +11,8 @@ import {
   ArrowRight, 
   Timer, 
   Scale, 
-  Waves 
+  Waves,
+  Settings2 // Added missing import
 } from "lucide-react";
 
 const scienceDeepDive = [
@@ -45,6 +47,17 @@ const scienceDeepDive = [
 ];
 
 export default function Science() {
+  // We use this to ensure the time only renders after the client-side hydration
+  const [time, setTime] = useState("");
+
+  useEffect(() => {
+    setTime(new Date().toLocaleTimeString());
+    const timer = setInterval(() => {
+      setTime(new Date().toLocaleTimeString());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section id="science" className="py-24 bg-slate-950 text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
@@ -137,14 +150,23 @@ export default function Science() {
                 <div className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
                 <span className="text-xs font-bold uppercase tracking-widest">Active Coach Agent: morning_run</span>
               </div>
-              <p className="text-slate-500">[{new Date().toLocaleTimeString()}] Querying Kitchen_DB...</p>
+              
+              {/* Added suppressHydrationWarning to avoid the mismatch error */}
+              <p className="text-slate-500" suppressHydrationWarning>
+                [{time || "--:--:--"}] Querying Kitchen_DB...
+              </p>
               <p className="text-white italic underline">Detected: Spinach (Expiring in 24h)</p>
-              <p className="text-slate-500">[{new Date().toLocaleTimeString()}] Cross-referencing History_DB...</p>
+              
+              <p className="text-slate-500" suppressHydrationWarning>
+                [{time || "--:--:--"}] Cross-referencing History_DB...
+              </p>
               <p className="text-white italic underline">Detected: Iron Deficit (-12% RDI)</p>
+              
               <p className="text-emerald-400 font-bold leading-tight mt-4">
                 SUCCESS: Morning Plan revised. <br/>
                 Action: Add 50g Spinach to Breakfast Scramble.
               </p>
+              
               <div className="pt-4 flex justify-between items-center">
                 <span className="text-[10px] text-slate-600">CONFIDENCE: 98.4%</span>
                 <div className="flex gap-1">
@@ -166,6 +188,3 @@ export default function Science() {
     </section>
   );
 }
-
-// Ensure you import Settings2 from Lucide
-import { Settings2 } from "lucide-react";

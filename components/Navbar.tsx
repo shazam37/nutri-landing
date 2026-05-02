@@ -38,6 +38,7 @@ export default function Navbar() {
         <div className="hidden md:flex gap-6 md:gap-10 text-sm font-bold text-slate-600 uppercase tracking-widest">
             <a href="#features" className="hover:text-emerald-600 transition-colors">Features</a>
             <a href="#science" className="hover:text-emerald-600 transition-colors">Science</a>
+            <a href="#pipeline" className="hover:text-emerald-600 transition-colors">Vision</a>
             {/* <a href="#join" className="hover:text-emerald-600 transition-colors">Collaborate</a> */}
         </div>
 
