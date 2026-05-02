@@ -25,7 +25,7 @@ const appPillars = [
     desc: "Your digital pantry. Track quantities and expiry dates. The system alerts you to items expiring soon to prevent waste.",
     icon: <Refrigerator className="text-blue-500" />,
     tag: "Inventory",
-    screen: "/kitchen.jpeg"
+    screen: "/kitchen_new.jpeg"
   },
   {
     title: "Plan: Zero-Waste Chef",
@@ -39,7 +39,7 @@ const appPillars = [
     desc: "Deep-dive into your Macro and Micro nutrient Signature. View Bar Charts and RDI heatmaps and track long-term metabolic trends.",
     icon: <History className="text-amber-500" />,
     tag: "Insights",
-    screen: "/history_3.jpeg"
+    screen: "/history.jpeg"
   },
   {
     title: "Admin: Proactive Agents",
